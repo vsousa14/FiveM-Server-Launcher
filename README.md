@@ -27,6 +27,13 @@ Self coded FiveM Server Launcher
 If you're having trouble setting up the launcher, feel free to join my discord server: https://discord.gg/GWZsjkJ
 
 
+## Known issues
+
+1. Launcher dosen't update
+2. If you open the launcher while opening the server, the application will broke
+3. Custom font doesn't load
+
+
 ## Next updates
 
 - [ ] Player list
