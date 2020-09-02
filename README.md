@@ -9,6 +9,9 @@ Self coded FiveM Server Launcher
 
 
 ## Setup
+
+### Make sure you have .NET Framework 4.7.2 installed
+
 1. Open the .sln file then go to Form1.cs and edit those variables: 
       - Line 26 public string ipSRV = "localhost:30120";
       - Line 27 public string DiscordLink = "https://discord.gg/GWZsjkJ";
@@ -17,6 +20,8 @@ Self coded FiveM Server Launcher
 2. Run the project, clicking in the play button
 
 3. And you're done.
+
+### You can create a setup file for your launcher, or distribute the .exe file + Newtonsoft.Json.dll files located in FiveMServerLauncher > bin > debug, always include the Newtonsoft.Json.dll file!
 
 ## Support
 If you're having trouble setting up the launcher, feel free to join my discord server: https://discord.gg/GWZsjkJ
