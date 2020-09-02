@@ -32,6 +32,7 @@ If you're having trouble setting up the launcher, feel free to join my discord s
 1. Launcher dosen't update
 2. If you open the launcher while opening the server, the application will broke
 3. Custom font doesn't load
+4. Default icon
 
 
 ## Next updates
