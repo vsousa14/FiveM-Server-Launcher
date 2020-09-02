@@ -13,7 +13,7 @@ Self coded FiveM Server Launcher
 ### Make sure you have .NET Framework 4.7.2 installed
 
 1. Open the .sln file then go to Form1.cs and edit those variables: 
-      - Line 26 public string ipSRV = "localhost:30120";
+      - Line 26 public string ipSRV = "localhost:30120"; (don't remove the **:30120**)
       - Line 27 public string DiscordLink = "https://discord.gg/GWZsjkJ";
       - Line 28 public string ts3IP = "";
     
