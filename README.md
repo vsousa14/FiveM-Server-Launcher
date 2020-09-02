@@ -29,8 +29,8 @@ If you're having trouble setting up the launcher, feel free to join my discord s
 
 ## Next updates
 
-- [ ] Redisign
 - [ ] Player list
+- [ ] Redisign
 - [ ] Add server announcements/logs
 - [ ] Connect the launcher with the server database
 
