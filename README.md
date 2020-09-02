@@ -21,13 +21,13 @@ If you're having trouble setting up the launcher, feel free to join my discord s
 
 ## Next updates
 
-[] Redisign
-[] Player list
-[] Add server announcements/logs
-[] Connect the launcher with the server database
+- [] Redisign
+- [] Player list
+- [] Add server announcements/logs
+- [] Connect the launcher with the server database
 
 ## Done
-[x] Added server status
-[x] Added player Count
-[x] connect to the server
-[x] hyperlinks to discord and teamspeak3
+- [x] Added server status
+- [x] Added player Count
+- [x] connect to the server
+- [x] hyperlinks to discord and teamspeak3
