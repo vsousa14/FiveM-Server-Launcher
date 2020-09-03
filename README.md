@@ -31,7 +31,7 @@ If you're having trouble setting up the launcher, feel free to join my discord s
 
 1. Launcher dosen't update
 2. If you open the launcher while opening the server, the application will broke
-3. Custom font doesn't load
+3. Custom font doesn't load (For now you can fix this by telling your players to install the font **pricedown bl**, it's located in the **Resources** folder)
 4. Default icon
 
 
