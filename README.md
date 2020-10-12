@@ -29,16 +29,14 @@ If you're having trouble setting up the launcher, feel free to join my discord s
 
 ## Known issues
 
-1. Launcher dosen't update
-2. If you open the launcher while opening the server, the application will broke
-3. Custom font doesn't load (For now you can fix this by telling your players to install the font **pricedown bl**, it's located in the **Resources** folder)
-4. Default icon
+1. If you open the launcher while opening the server, the application will broke
+2. Custom font doesn't load (For now you can fix this by telling your players to install the font **pricedown bl**, it's located in the **Resources** folder)
+3. Default icon
 
 
 ## Next updates
 
 - [ ] Player list
-- [ ] Update launcher every minute
 - [ ] Redesign
 - [ ] Add server announcements/logs
 - [ ] Connect the launcher with the server database
@@ -48,3 +46,4 @@ If you're having trouble setting up the launcher, feel free to join my discord s
 - [x] Added player Count
 - [x] connect to the server
 - [x] hyperlinks to discord and teamspeak3
+- [x] Update launcher every 3 seconds
