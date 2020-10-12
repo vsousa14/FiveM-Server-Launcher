@@ -65,24 +65,9 @@ namespace FiveMServerLauncher
         private string status;
         private string svCon;
         bool ipServ = false;
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
-            label1.Parent = pictureBox1;
-            label1.BackColor = Color.Transparent;
-            label2.Parent = pictureBox1;
-            label2.BackColor = Color.Transparent;
-            label3.Parent = pictureBox1;
-            label3.BackColor = Color.Transparent;
-            label4.Parent = pictureBox1;
-            label4.BackColor = Color.Transparent;
-            pictureBox2.Parent = pictureBox1;
-            pictureBox2.BackColor = Color.Transparent;
-            pictureBox3.Parent = pictureBox1;
-            pictureBox3.BackColor = Color.Transparent;
+        public void ServerUpdate() {
 
-
-            //---------------------------------------------------------------------------
             svCon = "http://" + ipSRV + "/players.json";
             WebRequest request = WebRequest.Create(svCon);
             request.Credentials = CredentialCache.DefaultCredentials;
@@ -102,13 +87,13 @@ namespace FiveMServerLauncher
 
                 }
 
-              
+
                 response.Close();
                 label2.Text = "Online";
                 label2.ForeColor = System.Drawing.Color.Green;
                 Player[] item = JsonConvert.DeserializeObject<Player[]>(responseFromServer);
                 var countPlayers = item.Count();
-                label3.Text = countPlayers.ToString()+" Connected Players";
+                label3.Text = countPlayers.ToString() + " Connected Players";
                 label3.Size = new Size(496, 25);
 
 
@@ -124,6 +109,28 @@ namespace FiveMServerLauncher
                 label3.Text = "Join our Discord or TS3 for further information";
                 label4.Visible = false;
             }
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+            label1.Parent = pictureBox1;
+            label1.BackColor = Color.Transparent;
+            label2.Parent = pictureBox1;
+            label2.BackColor = Color.Transparent;
+            label3.Parent = pictureBox1;
+            label3.BackColor = Color.Transparent;
+            label4.Parent = pictureBox1;
+            label4.BackColor = Color.Transparent;
+            pictureBox2.Parent = pictureBox1;
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox3.Parent = pictureBox1;
+            pictureBox3.BackColor = Color.Transparent;
+
+
+            //---------------------------------------------------------------------------
+            ServerUpdate();
 
 
         }
@@ -180,13 +187,7 @@ namespace FiveMServerLauncher
             else
             {
 
-                System.Diagnostics.Process process = new System.Diagnostics.Process();
-                System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
-                startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-                startInfo.FileName = "cmd.exe";
-                startInfo.Arguments = "/C Start fivem://connect/" + ipSRV;
-                process.StartInfo = startInfo;
-                process.Start();
+                System.Diagnostics.Process.Start($"fivem://connect/" + ipSRV);
                 Thread.Sleep(3000);
                 Close();
 
@@ -202,6 +203,11 @@ namespace FiveMServerLauncher
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("ts3server://"+ts3IP);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            ServerUpdate();
         }
     }
 }
