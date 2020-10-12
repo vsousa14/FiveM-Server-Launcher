@@ -26,6 +26,7 @@ Self coded FiveM Server Launcher
 ## Support
 If you're having trouble setting up the launcher, feel free to join my discord server: https://discord.gg/GWZsjkJ
 
+Tutorial video: https://www.youtube.com/watch?v=ozomPkPPtDc
 
 ## Known issues
 
