@@ -187,7 +187,13 @@ namespace FiveMServerLauncher
             else
             {
 
-                System.Diagnostics.Process.Start($"fivem://connect/" + ipSRV);
+                System.Diagnostics.Process process = new System.Diagnostics.Process();
+                System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+                startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+                startInfo.FileName = "cmd.exe";
+                startInfo.Arguments = "/C Start fivem://connect/" + ipSRV;
+                process.StartInfo = startInfo;
+                process.Start();
                 Thread.Sleep(3000);
                 Close();
 
