@@ -1,6 +1,5 @@
 # FiveM-Server-Launcher
 
-Developed by SOUSA
 
 
 Self coded FiveM Server Launcher
