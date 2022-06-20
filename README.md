@@ -1,7 +1,7 @@
 # FiveM-Server-Launcher
 
-@@ - DEPRECATED
-@@ + New Launcher is being developed
+# DEPRECATED
+## New Launcher is being developed
 
 Self coded FiveM Server Launcher
 
