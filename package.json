@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/vsousa14/FiveM-Server-Launcher#readme",
   "dependencies": {
-    "electron": "^20.1.1"
+    "axios": "^0.27.2",
+    "electron": "^20.1.1",
+    "find-process": "^1.4.7"
   }
 }
