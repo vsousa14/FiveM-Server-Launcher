@@ -6,7 +6,7 @@
 
 ## Game Overlay (BETA)
 ![Overlay Preview](https://cdn.discordapp.com/attachments/777950852451139704/1028810513817284608/unknown.png)
-If you set `useOverlay` to `true`, you will be able to change server while connected to a server, but be aware that his feature is not finished yet, so you might find some issues.
+If you set `useOverlay` to `true`, you will be able to change server while connected to a server (pressing `Alt+Shift+S`), but be aware that his feature is not finished yet, so you might find some issues.
 
 ## Setup
 
