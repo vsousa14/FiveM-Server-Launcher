@@ -1,0 +1,15 @@
+{
+    "useOverlay": false,
+    "discord":"https://discord.gg/GWZsjkJ",
+    "servers":[
+        {
+            "svname": "Server name here",
+            "ip":"127.0.0.1:30120"
+        },
+        {
+            "svname": "Server name here",
+            "ip":"127.0.0.1:30120"
+        }
+    ]
+
+}
