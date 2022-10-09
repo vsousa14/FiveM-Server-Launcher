@@ -4,6 +4,9 @@
 
 ![Launcher Preview](https://cdn.discordapp.com/attachments/731815909928337448/984213151656595557/unknown.png)
 
+## Game Overlay (BETA)
+![Overlay Preview](https://cdn.discordapp.com/attachments/777950852451139704/1028810513817284608/unknown.png)
+If you set `useOverlay` to `true`, you will be able to change server while connected to a server, but be aware that his feature is not finished yet, so you might find some issues.
 
 ## Setup
 
