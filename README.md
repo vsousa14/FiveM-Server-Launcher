@@ -18,3 +18,6 @@ Setup video Coming soon!
 
 ##Changing application style
 tutorial coming soon
+
+## Better support
+if this didn't help you, you can use the forums on my discord : https://discord.gg/GWZsjkJ
