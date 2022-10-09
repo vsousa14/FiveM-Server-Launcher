@@ -1,0 +1,28 @@
+{
+  "name": "fivem-server-launcher",
+  "version": "1.0.0",
+  "description": "![Launcher Preview](https://cdn.discordapp.com/attachments/731815909928337448/984213151656595557/unknown.png)",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vsousa14/FiveM-Server-Launcher.git"
+  },
+  "author": "SOUSA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vsousa14/FiveM-Server-Launcher/issues"
+  },
+  "homepage": "https://github.com/vsousa14/FiveM-Server-Launcher#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "electron": "^20.1.1",
+    "find-process": "^1.4.7",
+    "fs": "^0.0.1-security",
+    "node-powershell": "^4.0.0",
+    "regedit": "^5.1.1"
+  }
+}

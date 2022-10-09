@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <script>
+        if (typeof module === 'object') {
+            window.module == module;
+            module = undefined;
+        }
+    </script>
+    <script src="./jquery.js"></script>
+    <script>if (window.module) module = window.module;
+    </script>
+    <script defer src="render.js"></script>
+    <title>SOUSA's Launcher</title>
+</head>
+<body>
+    <div class="fixed-head">
+        <header class="win-hr-btns">
+            <span onclick="minimizeApp()" style="cursor: pointer;" class="material-icons">minimize</span>
+            <span onclick="closeApp()" style="cursor: pointer;" class="material-icons">close</span>
+        </header>
+        <div class="img-overlay">
+            <img class="sv-logo" src="./img/sv-logo.png"/>
+            <img class="header-img" src="./img/bg.jpg"/>
+            <div class="fade"></div>
+        </div>
+    
+        <div class="card-wrapper" id="cnt">
+            <!-- <span onclick="serverSwitcher(0)" id="la" style="display: none;" class="material-icons">arrow_back_ios</span> -->
+            <div class="card-container">
+                <!-- TODO: THIS BOTTOM TAG WILL CHANGE THE COLOR AND BOX SHADOW WITH JAVASCRIPT -->
+                <span id="sv-stat" class="sv-stat animStatus"></span>
+                <span id="sv-name" class="sv-name">SOUSA's Server</span>
+                <span style="cursor: pointer;" id="sv-join" class="material-icons">hourglass_empty</span>
+            </div>
+            <!-- <span onclick="serverSwitcher(1)" id="lr" style="display: none;" class="material-icons">arrow_forward_ios</span> -->
+        </div>
+    </div>
+  
+    <div class="players-wrapper">
+        <h2 id="totalPlayers">loading</h2>
+        <div id="plist" class="player-list">
+       <!--PLAYER LIST HERE-->
+        </div>
+    </div>
+
+    <div class="bottom-info">
+        <a onclick="openDiscord()" style="cursor:pointer;" id="dclink"><img src="./img/dc-logo.png" width="19" height="19"/></a> 
+    </div>
+    <!-- <h1>New Launcher ✨ <strong id="c">0</strong></h1>
+    <button onclick="addNumber()">Add</button>
+    <button onclick="removeNumber()">Remove</button>
+    <button onclick="checkprocess()">FiveM Opened?</button>
+    <button id="btn_start">JOIN SERVER</button> -->
+
+</body>
+</html>

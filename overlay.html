@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/overlay.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <script>
+        if (typeof module === 'object') {
+            window.module == module;
+            module = undefined;
+        }
+    </script>
+    <script src="./jquery.js"></script>
+    <script>if (window.module) module = window.module;
+    </script>
+    <script defer src="overlay.js"></script>
+    <title>Overlay</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Change Server</h2>
+        <div class="card-wrapper" id="cnt">
+            <!-- <span class="material-icons" style="color:white;">arrow_back_ios</span> -->
+
+            <div class="cards-container">
+                <div class="card">
+                    <span id="sv-stat" class="sv-stat animStatus"></span>
+                <span id="sv-name" class="sv-name">SOUSA's Server</span>
+                <span style="cursor: pointer;" id="sv-join" class="material-icons" onclick="closeApp()">hourglass_empty</span>
+                </div>
+            </div>
+            <!-- <span class="material-icons" style="color:white;">arrow_forward_ios</span> -->
+
+        </div>
+    </div>
+</body>
+</html>
