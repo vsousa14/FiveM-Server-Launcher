@@ -4,6 +4,14 @@
     font-family: 'Roboto', sans-serif;
 }
 
+:root {
+    --primary: #0C2346;
+    --secondary: #091931;
+    --white: #ffffff;
+    --green: #33FF00;
+    --red: #FF0000;
+  }
+
 body{
     background-color: rgba(10, 2, 77, 0.7);
 }
@@ -47,9 +55,20 @@ body{
     border-radius: 1rem;
 }
 
-.status{
+.sv-stat{
     content: '';
-    width: 2rem;
-    height: 2rem;
+    width: 1.3rem;
+    height: 1.3rem;
     border-radius: 50%;
-}
+    background-color: grey;
+    box-shadow: 0px 0px 4px 3px rgba(24, 24, 24, 0.25);
+ }
+
+ .animStatus{
+  animation-name: stretch;
+  animation-duration: 1.0s;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+ }

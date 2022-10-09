@@ -1,6 +1,7 @@
 const ipcRenderer = require("electron").ipcRenderer;
 const find = require('find-process');
 const CFG = require("./config.json");
+const remote = require('electron').remote;
 var IPServer = CFG.servers[0].ip;
 var svpos = 0;
 
@@ -10,24 +11,13 @@ const Shell = require('node-powershell');
 regedit.setExternalVBSLocation('resources/regedit/vbs')
 var DIR_FiveM = "";
 
-const openDiscord = () => {
-    ipcRenderer.send("opendc"
-    );
-}
-
-const addNumber = () => {
-    ipcRenderer.send(
-        "counter",
-        document.querySelector("#c").innerText
-    );
-}
-
-const minimizeApp = () => {
-    ipcRenderer.send("minimizeApp")
-}
-
 const closeApp = () => {
-    ipcRenderer.send("appClose")
+    let button = document.getElementById("sv-join");
+    if(button.innerText == "play_circle_filled"){
+        var window = remote.getCurrentWindow();
+        window.close();
+    }
+    
 }
 
 if(CFG.servers.length > 1){
@@ -39,6 +29,7 @@ if(CFG.servers.length > 1){
     lArrow.className = "material-icons";
     lArrow.innerText = "arrow_back_ios";
     lArrow.style.cursor = "pointer";
+    lArrow.style.color = "white";
     container.prepend(lArrow);
 
     let rArrow = document.createElement("span");
@@ -46,6 +37,7 @@ if(CFG.servers.length > 1){
     rArrow.className = "material-icons";
     rArrow.innerText = "arrow_forward_ios";
     rArrow.style.cursor = "pointer";
+    rArrow.style.color = "white";
     container.appendChild(rArrow);
     lArrow.onclick = () =>{serverSwitcher(0,lArrow ,rArrow);};
     rArrow.onclick = () =>{serverSwitcher(1,lArrow ,rArrow);};
@@ -54,15 +46,8 @@ if(CFG.servers.length > 1){
     serverSwitcher(null, null, null);
 }
 
-
-var isOnline = false;
 function serverSwitcher(pos, lArrow, rArrow){
     
-    let totalPlayers = document.getElementById("totalPlayers");
-    totalPlayers.innerText = `Loading`;
-    let plist = document.getElementById("plist");
-    plist.textContent = "";
-
     let svtotal = CFG.servers.length - 1;
 
         if(pos == 1 || pos == null){
@@ -88,7 +73,7 @@ function serverSwitcher(pos, lArrow, rArrow){
             IPServer = CFG.servers[svpos].ip
         }
         if(pos == 0){
-            svpos -= 1;    
+            svpos -= 1;  
             if(svpos< 0){
                 //DO NOTTING AND REMOVE LEFT ARROW (return)
                 lArrow.style.display = "none";
@@ -113,7 +98,7 @@ function serverSwitcher(pos, lArrow, rArrow){
         }
        
         ipcRenderer.send(
-            "serverStatus",
+            "serverStatusOv",
             CFG.servers[svpos].ip
         );
 
@@ -127,7 +112,7 @@ function serverSwitcher(pos, lArrow, rArrow){
     playBtn.innerText = "hourglass_empty"
 
     svnamePlaceHolder.innerText = CFG.servers[svpos].svname;
-    ipcRenderer.on("StatusChecker", (event, data) => {
+    ipcRenderer.on("StatusCheckerOv", (event, data) => {
         if(data){
             isOnline = true;
             svStatusPlaceHolder.style.backgroundColor = "var(--green)";
@@ -160,31 +145,7 @@ $("#sv-join").on("click", function(){
     }
 });
 
-if(isOnline){
-    ipcRenderer.send(
-        "getConnectedPlayers",
-        CFG.servers[svpos].ip
-    );
-    ipcRenderer.on("listPlayers", (event, data) => {
-        let totalPlayers = document.getElementById("totalPlayers");
-        totalPlayers.innerText = `${data.length} Players Connected`;
-        let plist = document.getElementById("plist");
-        plist.textContent = "";
-        if(data.length > 0){
-            for(var y = 0; y <= data.length - 1; y++){
-                let item = document.createElement("span");
-                item.innerText = data[y].name;
-                plist.appendChild(item);
-            }
-        }else{
-            let item = document.createElement("span");
-            item.innerText = "No data to display";
-            item.style.opacity = "0.8";
-            plist.appendChild(item);
-        }
-       
-    });
-}
+
 
         }else{
             isOnline = false;
@@ -193,11 +154,6 @@ if(isOnline){
             playBtn.setAttribute("disabled", true);
             playBtn.innerText = "signal_wifi_connected_no_internet_4";
             svStatusPlaceHolder.classList.remove("animStatus");
-
-            let totalPlayers = document.getElementById("totalPlayers");
-            totalPlayers.innerText = `Server Offline`;
-            let plist = document.getElementById("plist");
-            plist.textContent = "";
         }
     });
  }
