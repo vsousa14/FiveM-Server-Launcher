@@ -74,17 +74,21 @@ function serverSwitcher(pos, lArrow, rArrow){
                 rArrow.style.display = "none";
                 return;
             }
-            ;
-            if(svpos==svtotal){
-                rArrow.style.display = "none";
-            }else{
-                rArrow.style.display = "flex";
+            
+            if(svtotal > 0){
+                if(svpos==svtotal){
+                    rArrow.style.display = "none";
+                }else{
+                    rArrow.style.display = "flex";
+                }
+                if(svpos > 0){
+                    lArrow.style.display = "flex";
+                }else{
+                    lArrow.style.display = "none";
+                }
             }
-            if(svpos > 0){
-                lArrow.style.display = "flex";
-            }else{
-                lArrow.style.display = "none";
-            }
+
+            
             IPServer = CFG.servers[svpos].ip
         }
         if(pos == 0){
