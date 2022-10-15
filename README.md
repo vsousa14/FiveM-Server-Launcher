@@ -20,6 +20,7 @@ If you have troubles setting up or have a suggestion, please join my discord ser
 - to build the application, install electron builder using `npm i --save-dev electron-builder`, go to `package.json` move electron from `dependencies` to `devDependencies` and in the scripts part create this script `"build": "electron-builder"` add the code below after the scripts, open a new terminal and run the script you created using `npm run build`
 
 ## package.json build settings
+```
 "build":{
     "appId": "SOUSA Launcher",
     "win":{
@@ -46,6 +47,7 @@ If you have troubles setting up or have a suggestion, please join my discord ser
       }
     ]
   },
+```
 
 ## Changing application style
 tutorial coming soon
