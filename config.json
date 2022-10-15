@@ -4,11 +4,11 @@
     "servers":[
         {
             "svname": "Server name here",
-            "ip":"127.0.0.1:30120"
+            "ip":"xxxxxx"
         },
         {
             "svname": "Server name here",
-            "ip":"127.0.0.1:30120"
+            "ip":"xxxxxx"
         }
     ]
 

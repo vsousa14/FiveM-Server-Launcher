@@ -112,20 +112,16 @@ ipcMain.on('fivemOpened', (event, data) => {
 });
 
 ipcMain.on('serverStatus', (event, data) => {
-    console.log("entrei")
     const API = new Server(data);
     API.getServerStatus().then((val) => {
-        console.log(val)
         isServerOnline = val.online;
         win.webContents.send("StatusChecker",isServerOnline);
     });
 });
 
 ipcMain.on('serverStatusOv', (event, data) => {
-    console.log("entrei")
     const API = new Server(data);
     API.getServerStatus().then((val) => {
-        console.log(val)
         isServerOnline = val.online;
         overlayWindow.webContents.send("StatusCheckerOv",isServerOnline);
     });
