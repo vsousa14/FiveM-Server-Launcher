@@ -16,7 +16,7 @@ Setup video Coming soon!
 - edit `config.json` with your preferences, in the svname you can type your server name, and in the ip field you will add the numbers and letters after the `cfx.re/join/`
 - Build the application (tutorial coming soom)
 
-##Changing application style
+## Changing application style
 tutorial coming soon
 
 ## Better support
