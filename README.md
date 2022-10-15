@@ -13,7 +13,7 @@ If you set `useOverlay` to `true`, you will be able to change server while conne
 Setup video Coming soon!
 - Make sure you have NodeJs installed in your machine
 - open your terminal and run `npm i`, make sure that you're in the root folder of the launcher
-- edit `config.json` with your preferences, in the svname you can type your server name, and in the ip field you will add the numbers and letters after the cfx.re/join/
+- edit `config.json` with your preferences, in the svname you can type your server name, and in the ip field you will add the numbers and letters after the `cfx.re/join/`
 - Build the application (tutorial coming soom)
 
 ##Changing application style
