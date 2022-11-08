@@ -140,15 +140,20 @@ function serverSwitcher(pos, lArrow, rArrow){
              //Get Directory FiveM
  regedit.list("HKCU\\SOFTWARE\\CitizenFX\\FiveM\\", function(err, result) {
     $.each(result, function(index, data) {
-        if (data.values["Last Run Location"].value) {
-            DIR_FiveM = data.values["Last Run Location"].value;
-            if (fs.existsSync(DIR_FiveM)) {
-                $("#sv-join").prop("disabled", false).text("play_circle_filled");
-            } else {
-                $("#sv-join").prop("disabled", true).text("close");
-            }
-            return;
+        try {
+            if (data.values["Last Run Location"].value) {
+                DIR_FiveM = data.values["Last Run Location"].value;
+                if (fs.existsSync(DIR_FiveM)) {
+                    $("#sv-join").prop("disabled", false).text("play_circle_filled");
+                } else {
+                    $("#sv-join").prop("disabled", true).text("close");
+                }
+                return;
+            }    
+        } catch (error) {
+            $("#sv-join").prop("disabled", true).text("error").attr("title", "Seems that you don't have FiveM Installed.");
         }
+        
     });
 });
 
