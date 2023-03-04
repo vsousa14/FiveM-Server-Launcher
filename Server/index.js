@@ -31,7 +31,7 @@ class Server {
 	getPlayersList() {
 		return new Promise((send, err) => {
 			axios
-				.get(`https://servers-frontend.fivem.net/api/servers/single/${this.ip}`,{headers: { 'User-Agent': 'cfx-api' } }, { timeout: this.options.timeout })
+				.get(`https://servers-frontend.fivem.net/api/servers/single/${this.ip}`,{headers: { 'User-Agent': 'cfx' } }, { timeout: this.options.timeout })
 				.then(function(body) {
 					let players = body.data.Data.players;
 					send(players);
@@ -46,7 +46,7 @@ class Server {
 	getServerStatus() {
 		return new Promise((send, err) => {
 			axios
-				.get(`https://servers-frontend.fivem.net/api/servers/single/${this.ip}`,{headers: { 'User-Agent': 'cfx-api' } }, { timeout: this.options.timeout })
+				.get(`https://servers-frontend.fivem.net/api/servers/single/${this.ip}`,{headers: { 'User-Agent': 'cfx' } }, { timeout: this.options.timeout })
 				.then(function(body) {
 					let server_status = {
 						online: true,
@@ -67,7 +67,7 @@ class Server {
     getMaxPlayers() {
 		return new Promise((send, err) => {
 			axios
-				.get(`https://servers-frontend.fivem.net/api/servers/single/${this.ip}`,{headers: { 'User-Agent': 'cfx-api' } }, { timeout: this.options.timeout })
+				.get(`https://servers-frontend.fivem.net/api/servers/single/${this.ip}`,{headers: { 'User-Agent': 'cfx' } }, { timeout: this.options.timeout })
 				.then(function(body) {
 					let maxClients = body.data.Data.vars.sv_maxClients;
 					send(maxClients);
